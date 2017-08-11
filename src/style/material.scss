@@ -1,0 +1,14 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '@material/layout-grid/mdc-layout-grid';
+
+
+// Typography
+@import '@material/typography/mdc-typography';
+
+body {
+  @include mdc-typography-base();
+}
+
+p {
+  @include mdc-typography('body1');
+}

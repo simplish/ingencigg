@@ -1,0 +1,22 @@
+<div class="mdc-layout-grid">
+    <div class="mdc-layout-grid__inner">
+      <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque magnam quasi adipisci fugit necessitatibus amet aperiam, fugiat labore doloremque dolorum neque quo cupiditate, sed facere perspiciatis. Qui nesciunt architecto quisquam.</p>
+        <md-tab-group>
+          <md-tab label="Tab 1">
+            <p>
+              Content 1
+              {{ data.noSmokingSinceFormatted }}
+              {{ data.numberOfCigarettes }}
+              {{ data.calculatedData | json }}
+            </p>
+
+          </md-tab>
+          <md-tab label="Tab 2">
+            <cigg-calculation-input (onData)="onData($event)"></cigg-calculation-input>
+          </md-tab>
+        </md-tab-group>
+      </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

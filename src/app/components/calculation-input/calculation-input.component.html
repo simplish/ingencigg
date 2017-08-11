@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="mdc-layout-grid__inner" style="background: #bada55">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+          <md-input-container>
+            <input mdInput [mdDatepicker]="picker" placeholder="Choose a date" (dateInput)="onInput($event)">
+            <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+          </md-input-container>
+          <md-datepicker #picker></md-datepicker>
+          <md-slider (input)="onCiggCountChange($event)" min="1" max="60" step="1" [value]="calculationData.numberOfCigarettes"></md-slider>{{ calculationData.numberOfCigarettes }}
+        </div>
+  </div>
+</div>
