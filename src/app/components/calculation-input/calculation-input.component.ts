@@ -10,7 +10,6 @@ import { MdDatepickerInputEvent, MdSliderChange } from '@angular/material';
 export class CalculationInputComponent implements OnInit {
 
   private calculationData = new CalculationData();
-  @Output() onData = new EventEmitter<CalculationData>();
   constructor() { }
 
   ngOnInit() {
@@ -28,6 +27,6 @@ export class CalculationInputComponent implements OnInit {
   }
 
   emitData() {
-    this.onData.emit(this.calculationData);
+    //this.onData.emit(this.calculationData);
   }
 }

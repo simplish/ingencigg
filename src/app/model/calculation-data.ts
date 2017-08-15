@@ -7,6 +7,8 @@ export class CalculationData {
   private packageSize = 20;
   private packagePrize = 57;
   private priceUnit = 'Kronor';
+  public numberOfDays: number;
+  public moneySaved: number;
 
   get noSmokingSinceFormatted() {
     const momentDate = moment(this.noSmokingSince);
@@ -26,5 +28,9 @@ export class CalculationData {
       numberOfDays,
       moneySaved
     };
+  }
+
+  static default() {
+    return new CalculationData();
   }
 }

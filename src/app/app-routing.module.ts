@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { CalculationInputComponent } from './components/calculation-input/calculation-input.component';
 
 const routes: Routes = [
   {
     path: '',
-    children: []
+    component: HomeComponent
+  },
+  {
+    path: 'settings',
+    component: CalculationInputComponent
   }
 ];
 

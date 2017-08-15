@@ -1,6 +1,11 @@
+@import 'reset';
 @import 'variables';
 @import 'material';
 
 .max-width {
   max-width: 1280px;
+}
+
+body {
+  height: 1000px;
 }

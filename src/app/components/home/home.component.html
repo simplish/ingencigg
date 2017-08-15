@@ -1,0 +1,6 @@
+<p *ngIf="calculationService.calculationData$ | async as data;">
+  Content 1
+  {{ data.noSmokingSinceFormatted }}
+  {{ data.numberOfCigarettes }}
+  {{ data.calculatedData | json }}
+</p>

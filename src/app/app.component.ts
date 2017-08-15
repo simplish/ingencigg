@@ -7,12 +7,4 @@ import { CalculationData } from './model/calculation-data';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'cigg';
-
-  private data = new CalculationData();
-
-  onData (data: CalculationData): void {
-    console.log(JSON.stringify(data));
-    this.data = data;
-  }
 }

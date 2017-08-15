@@ -4,6 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CalculationService } from './services/calculation.service';
 
 import {
   MdDatepickerModule,
@@ -12,13 +13,17 @@ import {
   MdTabsModule,
   DateAdapter,
   MD_DATE_FORMATS,
-  MdNativeDateModule
+  MdNativeDateModule,
+  MdToolbarModule,
+  MdButtonModule,
+  MdIconModule
 } from '@angular/material';
 
 import { MyDateAdapter } from './my-date-adapter';
 import { MY_DATE_FORMATS } from './MY_DATE_FORMATS';
 import 'hammerjs';
 import { CalculationInputComponent } from './components/calculation-input/calculation-input.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   exports: [
@@ -26,7 +31,9 @@ import { CalculationInputComponent } from './components/calculation-input/calcul
     MdInputModule,
     MdSliderModule,
     MdTabsModule,
-    MdNativeDateModule
+    MdNativeDateModule,
+    MdButtonModule,
+    MdIconModule
   ]
 })
 export class CiggMaterialModule {}
@@ -34,7 +41,8 @@ export class CiggMaterialModule {}
 @NgModule({
   declarations: [
     AppComponent,
-    CalculationInputComponent
+    CalculationInputComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +53,8 @@ export class CiggMaterialModule {}
   providers: [
     { provide: LOCALE_ID, useValue: 'sv-SE' },
     { provide: DateAdapter, useClass: MyDateAdapter },
-    { provide: MD_DATE_FORMATS, useValue: MY_DATE_FORMATS }
+    { provide: MD_DATE_FORMATS, useValue: MY_DATE_FORMATS },
+    CalculationService
   ],
   bootstrap: [AppComponent]
 })
