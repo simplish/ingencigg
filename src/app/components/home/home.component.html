@@ -1,6 +1,3 @@
 <p *ngIf="calculationService.calculationData$ | async as data;">
-  Content 1
-  {{ data.noSmokingSinceFormatted }}
-  {{ data.numberOfCigarettes }}
-  {{ data.calculatedData | json }}
+  Du rökte din sista cigg {{ data.noSmokingSinceFormatted }}, {{ data.numberOfDays }} dagar sen. Sen du slutade röka har du sparat {{ data.moneySaved }} {{ data.unit }} på att inte köpa cigg. Bra jobbat!
 </p>
