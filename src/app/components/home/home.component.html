@@ -1,3 +1,20 @@
-<p *ngIf="calculationService.calculationData$ | async as data;">
-  Du rökte din sista cigg {{ data.noSmokingSinceFormatted }}, {{ data.numberOfDays }} dagar sen. Sen du slutade röka har du sparat {{ data.moneySaved }} {{ data.unit }} på att inte köpa cigg. Bra jobbat!
-</p>
+<div class="mdc-layout-grid mdc-toolbar-fixed-adjust">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+      <div class="circles" *ngIf="calculationService.calculationData$ | async as data;">
+       <!-- <p>
+          Du rökte din sista cigg {{ data.noSmokingSinceFormatted }}, {{ data.numberOfDays }} dagar sen. Sen du slutade röka har du sparat {{ data.moneySaved }} {{ data.unit }} på att inte köpa cigg. Bra jobbat!
+        </p>-->
+        <div class="circle">
+          {{ data.numberOfDays }}
+        </div>
+        <div class="circle smoke-free">
+          <md-icon>smoke_free</md-icon>
+        </div>
+        <div class="circle">
+          {{ data.moneySaved }} {{ data.unit }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
