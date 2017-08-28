@@ -7,10 +7,10 @@ import { CalculationService } from '../../services/calculation.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   constructor(private calculationService: CalculationService) { }
 
   ngOnInit() {
+    console.log('oninit home');
   }
 
 }

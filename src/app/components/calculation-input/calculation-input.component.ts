@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { CalculationData } from '../../model/calculation-data';
 import { MdDatepickerInputEvent, MdSliderChange } from '@angular/material';
 import { CalculationService } from '../../services/calculation.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'cigg-calculation-input',
@@ -15,6 +16,10 @@ export class CalculationInputComponent implements OnInit {
   constructor(private calculationService: CalculationService) { }
 
   ngOnInit() {
+    console.log('oninit calculation');
+    this.calculationData.numberOfCigarettes = 7;
+    this.calculationData.noSmokingSince = moment('2017-06-12').toDate();
+    this.emitData(this.calculationData);
   }
 
   onInput(data: MdDatepickerInputEvent<Date>): void {

@@ -9,6 +9,7 @@ export class CalculationData {
   public readonly priceUnit = 'Kronor';
   public numberOfDays: number;
   public moneySaved: number;
+  public backgroundColor = '#00ff00'; // default
 
   get noSmokingSinceFormatted() {
     const momentDate = moment(this.noSmokingSince);

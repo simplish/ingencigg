@@ -8,8 +8,8 @@
         <div class="circle">
           {{ data.numberOfDays }}
         </div>
-        <div class="circle smoke-free">
-          <md-icon>smoke_free</md-icon>
+        <div class="circle smoke-free" [style.backgroundColor]="data.backgroundColor" >
+          <md-icon>home</md-icon>
         </div>
         <div class="circle">
           {{ data.moneySaved }} {{ data.unit }}

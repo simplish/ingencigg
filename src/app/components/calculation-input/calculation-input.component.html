@@ -2,7 +2,7 @@
     <div class="mdc-layout-grid__inner">
       <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
         <md-input-container>
-          <input mdInput [max]="maxDate" [mdDatepicker]="picker" placeholder="Choose a date" (dateInput)="onInput($event)">
+          <input mdInput [max]="maxDate" [mdDatepicker]="picker" [value]="calculationData.noSmokingSince" placeholder="Choose a date" (dateInput)="onInput($event)">
           <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
         </md-input-container>
         <md-datepicker #picker></md-datepicker>
