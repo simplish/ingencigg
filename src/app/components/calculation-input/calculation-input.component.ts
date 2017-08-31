@@ -12,14 +12,15 @@ import * as moment from 'moment';
 export class CalculationInputComponent implements OnInit {
 
   private maxDate = new Date();
-  private calculationData = new CalculationData();
-  constructor(private calculationService: CalculationService) { }
+  private calculationData;
+  constructor(private calculationService: CalculationService) {
+    calculationService.calculationData$.subscribe(data => {
+      this.calculationData = data;
+    });
+  }
 
   ngOnInit() {
     console.log('oninit calculation');
-    this.calculationData.numberOfCigarettes = 7;
-    this.calculationData.noSmokingSince = moment('2017-06-12').toDate();
-    this.emitData(this.calculationData);
   }
 
   onInput(data: MdDatepickerInputEvent<Date>): void {

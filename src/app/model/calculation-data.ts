@@ -17,6 +17,10 @@ export class CalculationData {
   }
 
   static default() {
-    return new CalculationData();
+    console.log("generating default calculation");
+    const calculationData = new CalculationData();
+    calculationData.numberOfCigarettes = 7;
+    calculationData.noSmokingSince = moment('2017-06-12').toDate();
+    return calculationData;
   }
 }
